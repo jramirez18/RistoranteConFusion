@@ -21,7 +21,7 @@
 .jumbotron{
     padding: 70px 30px 70px 30px;
     margin: 0px auto;
-    background-color: #267BC5;
+    background-color: #9575CD;
     color: floralwhite; /*color de la letra*/
 }
 
@@ -30,3 +30,18 @@
     margin: 0px;
     color: #0f0f0f;
 }
+
+.left-half {
+    flex: 1;
+  }
+
+  /*PARTE DEL NAVBAR*/
+  body{
+      padding: 50px 0px  0px  0px;
+      z-index: 0;
+  }
+
+
+  .navbar-dark{
+      background-color: #512da8;
+  }
