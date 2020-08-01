@@ -33,22 +33,37 @@
 
 .left-half {
     flex: 1;
-  }
+}
 
   /*PARTE DEL NAVBAR*/
   body{
       padding: 50px 0px  0px  0px;
       z-index: 0;
-  }
+    }
 
-
-  .navbar-dark{
-      background-color: #512da8;
-  }
+.navbar-dark{
+    background-color: #512da8;
+}
 /*Esta modificación agrega un borde de 1px al contenido de la pestaña que se une con el borde superior introducido por el elemento de navegación de pestaña para dar una apariencia de pestaña limpia.*/
-  .tab-content{
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      padding: 10px;
-  }
+.tab-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+  /*clases parte del carrusel semana3*/
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+    height: 300px;/*ancho del carrousel*/
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;/*ancho de la imagen igual al del carrousel*/
+}
