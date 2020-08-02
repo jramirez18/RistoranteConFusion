@@ -67,3 +67,12 @@
     left: 0;
     min-height: 300px;/*ancho de la imagen igual al del carrousel*/
 }
+
+/*CSS class for the buttons pause-play carrousel cambia la posicion de los botones parte de la week 4*/
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+
+}

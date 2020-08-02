@@ -173,6 +173,16 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <!--WEEK 4-->
+                    <!--Introducimos dos botones nuevos (play-pause) en el componente carrusel que ya hemos incluido en la página index.html. y agregamos el code js al final-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -403,6 +413,22 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- bootstrap se coloco de ultimo -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--Agregando code javascript para el carousel... js codigo escrito en sintaxis jquery-->
+    <script>
+        $(document).ready(function () {
+            $('#mycarousel').carousel({ interval: 2000 })
+            //activando el boton de pausa
+            $("#carousel-pause").click(function () {
+                $("#mycarousel").carousel('pause');
+            });
+            //activando el boton de play
+            $("#carousel-play").click(function () {
+                $("#mycarousel").carousel('cycle');
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>
