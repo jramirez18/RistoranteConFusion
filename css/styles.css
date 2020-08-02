@@ -19,6 +19,16 @@
   background: #9575CD;
   color: floralwhite; }
 
+.modal-header {
+  background-color: #512DA8;
+  color: floralwhite; }
+
+.modal-body {
+  background-color: #9575CD; }
+
+button.close {
+  color: #9575CD; }
+
 address {
   font-size: 80%;
   margin: 0px;
