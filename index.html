@@ -97,17 +97,12 @@
                 </div>
                 <!--agregamos el LOGO de la pagina y agregue el align.... col-sm-3 PUEDE IR ASI o col-sm sin el 3 da el mismo resultado-->
                 <div class="col-12 col-sm-3  align-self-center">
-                    <!--AGREGAMOS LA IMAGENy agregue un class img-fluid, el btn-block ocupa todo el ancho del bloque-->
+                    <!--AGREGAMOS LA IMAGEN y agregue un class img-fluid, el btn-block ocupa todo el ancho del bloque-->
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3  align-self-center">
-                    <!--Lo tenia antes de esta forma, pero lo cambie a la otra forma con el href-->
-                    <!-- <button type="submit" class="btn btn-block nav-link btn-warning">Reserve Table</button>-->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
-                        title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom"
-                        href="#reserveform">Reserve
-                        Table</a>
-                    <!--Despues agregamos un codigo js al boton de esta pagina para activar el TOOLTIP, en el footer agregue este codigo-->
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
+                        data-target="#reserveModal" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -258,17 +253,21 @@
             </div>
         </div>
 
-        <!--TASK 1...WEEK2-->
-        <div class="row row-content justify-content-center">
-            <div class="col-xs-12 col-sm-8  col-xl-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
+        <!--MODAL RESERVE TABLE-->
+        <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve a Table </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
                             <div class="form-group row">
-                                <label for="numberGuest" class="col-xs-12 col-sm-2  col-xl-2 col-form-label">Number
-                                    of
-                                    Guest</label>
+                                <label for="numberGuest"
+                                    class="col-xs-12 col-sm-2  col-xl-2 col-form-label"><strong>Number
+                                        of
+                                        Guest</strong></label>
                                 <div class="col-xs-12 col-sm-6  col-xl-6">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions"
@@ -302,11 +301,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="numberGuest" class="col-xs-12 col-sm-2  col-xl-2 col-form-label">Date
-                                    and
-                                    Time</label>
 
+                            <div class="form-group row">
+                                <label for="section"
+                                    class="col-xs-12 col-sm-2  col-xl-2 col-form-label"><strong>Section</strong></label>
+                                <div class="col-xs-12 col-sm-6 col-xl-6">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off"
+                                                checked>Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off">Smoking
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="dateTime" class="col-xs-12 col-sm-2  col-xl-2 col-form-label"><strong>Date
+                                        and
+                                        Time</strong></label>
                                 <div class="col-xs-12 col-sm-3 col-xl-3">
                                     <input type="date" class="form-control" id="date" name="date" placeholder="Date">
                                 </div>
@@ -317,11 +332,12 @@
 
                             <div class="form-group row">
                                 <div class="offset-sm-2 col-xs-12 col-sm-3 col-xl-3">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary">Reserve</button>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
 
@@ -387,11 +403,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- bootstrap se coloco de ultimo -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });//esta es una sintax de jquery, parte del TOOLTIP
-    </script>
 </body>
 
 </html>
