@@ -37,13 +37,13 @@ $carousel-item-height: 300px;
 .modal-header{
     background-color: $background-dark;
     color:floralwhite;
+
+    .close{
+        color: floralwhite;
+    }
 }
 .modal-body{
     background-color: $background-light;
-}
-
-button.close{
-    color: $background-light;
 }
 
 address{
